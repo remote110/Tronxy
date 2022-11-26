@@ -22,8 +22,7 @@
   3. Check the model on the machine: Start the printer, enter the System ->Info interface, and when the firmware version is above 2.16, you can view the relevant information of the current model, as shown in the following figure.
 <img align="center" width=400 src="buildroot/share/pixmaps/tronxy/info.png" />
   
-  4. If the applicable model listed on this page does not have your model, please download another appropriate firmware
-
+  4. If the applicable model listed on this page does not have your model, please download another appropriate firmware.
   5. Open Marlin/TronxyMachine.h, Find #define TRONXY_ PROJ, change the following project name to PROJ_ XXX (XXX represents your printer model).
   - Note: The modified project name must be a name defined above the file(TronxyMachine.h). If there is no such name, contact customer service for handling.
   e.g. your model is XY2_PRO:
@@ -35,9 +34,8 @@
   - Add a statement below the statement 'USBH_LL_Init(phost);' : 'USBH_LL_Disconnect(phost);'
 <img align="center" width=372 src="buildroot/share/pixmaps/tronxy/usb_core_modify.png" />
 
-  7. Compile the firmware. The first compilation may take a long time. The compiled target file is placed in the 'update' folder
-
-  8. Copy the 'update' folder into the root directory of the SD card, insert the card into the printer, restart, and the machine will automatically update the firmware. After that, the machine will run the current firmware.
+  8. Compile the firmware. The first compilation may take a long time. The compiled target file is placed in the 'update' folder
+  9. Copy the 'update' folder into the root directory of the SD card, insert the card into the printer, restart, and the machine will automatically update the firmware. After that, the machine will run the current firmware.
 
 ## FAQ
 
