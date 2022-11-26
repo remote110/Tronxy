@@ -29,7 +29,8 @@
   e.g. your model is XY2_PRO:
 <img align="center" width=473 src="buildroot/share/pixmaps/tronxy/modify_model.png" />
 
-  6. Open file: .platformio\packages\framework-arduinoststm32\system\Middlewares\ST\STM32_USB_Host_Library\Core\Src\usbh_core.c
+  6. Try compiling, and the compiler will automatically download relevant dependent libraries. If an error occurs, please refer to the FAQ for solutions
+  7. Open file: .platformio\packages\framework-arduinoststm32\system\Middlewares\ST\STM32_USB_Host_Library\Core\Src\usbh_core.c
   - Find function USBH_ StatusTypeDef USBH_ Init(...)
   - Add a statement below the statement 'USBH_LL_Init(phost);' : 'USBH_LL_Disconnect(phost);'
 <img align="center" width=372 src="buildroot/share/pixmaps/tronxy/usb_core_modify.png" />
